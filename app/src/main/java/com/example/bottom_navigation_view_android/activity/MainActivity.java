@@ -2,6 +2,7 @@ package com.example.bottom_navigation_view_android.activity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import com.example.bottom_navigation_view_android.fragment.ExploreFragment;
 import com.example.bottom_navigation_view_android.fragment.HomeFragment;
 import com.example.bottom_navigation_view_android.fragment.MoreFragment;
 import com.example.bottom_navigation_view_android.fragment.OthersFragment;
+import com.example.bottom_navigation_view_android.utility.BottomNavigationBehavior;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initViews() {
         bottomNav = findViewById(R.id.navView);
+        // attaching bottom sheet behaviour - hide / show on scroll
+        CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) bottomNav.getLayoutParams();
+        layoutParams.setBehavior(new BottomNavigationBehavior());
+
         addFragment(new HomeFragment());
     }
 
