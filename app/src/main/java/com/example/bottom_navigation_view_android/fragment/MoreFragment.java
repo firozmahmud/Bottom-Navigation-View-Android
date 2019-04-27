@@ -14,11 +14,9 @@ import com.example.bottom_navigation_view_android.R;
  */
 public class MoreFragment extends Fragment {
 
-
     public MoreFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

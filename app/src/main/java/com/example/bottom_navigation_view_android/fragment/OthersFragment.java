@@ -14,7 +14,6 @@ import com.example.bottom_navigation_view_android.R;
  */
 public class OthersFragment extends Fragment {
 
-
     public OthersFragment() {
         // Required empty public constructor
     }
